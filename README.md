@@ -105,7 +105,7 @@ Projects focused on concepts and technologies for connected devices.
 Java projects focused on Object-Oriented Programming concepts.
 
 ---
--->
+
 
 ## 📊 GitHub Stats
 
@@ -118,6 +118,8 @@ Java projects focused on Object-Oriented Programming concepts.
 </div>
 
 ---
+
+-->
 
 ## 🔥 GitHub Streak
 
