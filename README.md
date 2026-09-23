@@ -131,6 +131,8 @@ Java projects focused on Object-Oriented Programming concepts.
 
 ---
 
+<!--
+
 ## 📈 Contribution Activity
 
 <div align="center">
@@ -140,6 +142,8 @@ Java projects focused on Object-Oriented Programming concepts.
 </div>
 
 ---
+
+-->
 
 ## 🎯 Current Focus
 
