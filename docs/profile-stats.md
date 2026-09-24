@@ -34,7 +34,7 @@ Uma branch que exige pull request pode impedir o commit direto do bot.
   excluindo forks. Mostra até oito linguagens, com percentuais relativos ao total
   de todas as linguagens. Não representa tempo de uso ou nível de domínio.
 - Streak: sequência atual, maior sequência **dentro dos 365 dias consultados** e
-  número de dias ativos. Hoje sem contribuições ainda não interrompe a sequência
+  total de contribuições no período. Hoje sem contribuições ainda não interrompe a sequência
   de ontem. As datas usadas no cálculo são UTC.
 - Atividade: contribuições diárias nos últimos **30 dias**.
 
