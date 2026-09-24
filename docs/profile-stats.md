@@ -5,6 +5,11 @@ do GitHub e executa `scripts/generate_profile.py`, que usa apenas a biblioteca p
 do Python. Os quatro SVGs ficam versionados em `assets/` e são exibidos pelo README.
 Não é necessário hospedar um servidor, ativar GitHub Pages ou criar um token pessoal.
 
+O gerador também atualiza as URLs dos quatro cards no README com `?v=<hash>`.
+Essa versão depende do conteúdo de cada SVG: quando a imagem muda, o endereço
+muda junto para evitar a reutilização da imagem anterior em cache. O workflow
+publica o README e as imagens no mesmo commit.
+
 ## Ativar
 
 1. Faça commit e push dos arquivos novos e do README para a branch `main`.

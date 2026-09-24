@@ -5,7 +5,7 @@ from datetime import date, timedelta
 from unittest.mock import patch
 from xml.etree import ElementTree
 
-from generate_profile import calendar_days, fetch_data, render_cards, streaks
+from generate_profile import calendar_days, fetch_data, render_cards, streaks, version_card_links
 
 
 def collection(counts=()):
@@ -26,6 +26,22 @@ def collection(counts=()):
 
 
 class ProfileTests(unittest.TestCase):
+    def test_image_versions_follow_content_and_preserve_other_text(self):
+        readme = 'Intro\n<img src="./assets/github-stats.svg" alt="Stats" />\nEnd'
+        cards = {"github-stats.svg": "first SVG"}
+        updated = version_card_links(readme, cards)
+        self.assertIn('github-stats.svg?v=', updated)
+        self.assertTrue(updated.startswith('Intro\n'))
+        self.assertTrue(updated.endswith('alt="Stats" />\nEnd'))
+        self.assertEqual(version_card_links(updated, cards), updated)
+        changed = version_card_links(updated, {"github-stats.svg": "new SVG"})
+        self.assertNotEqual(changed, updated)
+        self.assertEqual(changed.count('?v='), 1)
+
+    def test_missing_image_link_rejected(self):
+        with self.assertRaises(ValueError):
+            version_card_links('No cards', {"github-stats.svg": "SVG"})
+
     def test_streak_allows_unfinished_today(self):
         days = calendar_days(collection([1, 2, 3, 0]), date(2026, 9, 23))
         self.assertEqual(streaks(days), (3, 3))

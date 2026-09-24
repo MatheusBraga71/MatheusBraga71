@@ -1,7 +1,9 @@
 """Generate standalone profile cards using only GitHub's API and Python stdlib."""
 
+import hashlib
 import json
 import os
+import re
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from html import escape
@@ -164,6 +166,17 @@ def render_cards(collection, repositories, today):
     return cards
 
 
+def version_card_links(readme, cards):
+    """Change each image URL only when its SVG content changes."""
+    for filename, svg in cards.items():
+        version = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:16]
+        pattern = rf'(src="\./assets/{re.escape(filename)})(?:\?[^"\s]*)?"'
+        readme, count = re.subn(pattern, rf'\g<1>?v={version}"', readme)
+        if count != 1:
+            raise ValueError(f"Expected exactly one README image for {filename}; found {count}")
+    return readme
+
+
 def main():
     token = os.environ.get("GH_TOKEN")
     if not token:
@@ -172,10 +185,13 @@ def main():
     collection, repositories = fetch_data(os.environ["PROFILE_USERNAME"], token, today)
     # Complete every request and render before touching the previous good images.
     cards = render_cards(collection, repositories, today)
+    readme_path = ROOT / "README.md"
+    readme = version_card_links(readme_path.read_text(encoding="utf-8"), cards)
     output = ROOT / "assets"
     output.mkdir(exist_ok=True)
     for filename, svg in cards.items():
         (output / filename).write_text(svg, encoding="utf-8")
+    readme_path.write_text(readme, encoding="utf-8")
     print(f"Generated {len(cards)} cards from {len(repositories)} public repositories.")
 
 
