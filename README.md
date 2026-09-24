@@ -105,45 +105,46 @@ Projects focused on concepts and technologies for connected devices.
 Java projects focused on Object-Oriented Programming concepts.
 
 ---
+-->
 
 
 ## 📊 GitHub Stats
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=MatheusBraga71&show_icons=true&include_all_commits=true&count_private=true&hide_border=true" />
+<img height="200" src="./assets/github-stats.svg" alt="GitHub statistics for the last 365 days" />
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatheusBraga71&layout=compact&langs_count=8&hide_border=true" />
+<img height="200" src="./assets/top-languages.svg" alt="Most used languages in public repositories" />
 
 </div>
 
 ---
 
--->
+
 
 ## 🔥 GitHub Streak
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com/?user=MatheusBraga71&hide_border=true" />
+<img src="./assets/github-streak.svg" alt="Contribution streaks within the last 365 days" />
 
 </div>
 
 ---
 
-<!--
+
 
 ## 📈 Contribution Activity
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MatheusBraga71&hide_border=true" />
+<img src="./assets/contribution-activity.svg" alt="Daily GitHub contributions over the last 30 days" />
 
 </div>
 
 ---
 
--->
+
 
 ## 🎯 Current Focus
 
