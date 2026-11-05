@@ -112,7 +112,7 @@ Java projects focused on Object-Oriented Programming concepts.
 
 <div align="center">
 
-<img width="49%" src="./assets/github-stats.svg?v=80b3de0a01c64ff1" alt="GitHub statistics for the last 365 days" />
+<img width="49%" src="./assets/github-stats.svg?v=2a1609786681b28a" alt="GitHub statistics for the last 365 days" />
 
 <img width="49%" src="./assets/top-languages.svg?v=099988a9c830f9bb" alt="Most used languages in public repositories" />
 
@@ -126,7 +126,7 @@ Java projects focused on Object-Oriented Programming concepts.
 
 <div align="center">
 
-<img src="./assets/github-streak.svg?v=4084e99a2d76c635" alt="Contribution streaks within the last 365 days" />
+<img src="./assets/github-streak.svg?v=2bdf3edf263d4441" alt="Contribution streaks within the last 365 days" />
 
 </div>
 
@@ -138,7 +138,7 @@ Java projects focused on Object-Oriented Programming concepts.
 
 <div align="center">
 
-<img src="./assets/contribution-activity.svg?v=d8696f59e5a39e5a" alt="Daily GitHub contributions over the last 30 days" />
+<img src="./assets/contribution-activity.svg?v=8d1eaf4b0fb9b763" alt="Daily GitHub contributions over the last 30 days" />
 
 </div>
 
